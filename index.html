@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pengingat Tugas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Pengingat Tugas Kuliah</h1>
+
+  <div class="container">
+
+    <div class="card kiri">
+      <h3>Tambah Tugas</h3>
+      <input type="text" id="judul" placeholder="Judul Tugas">
+      <textarea id="deskripsi" placeholder="Deskripsi Tugas"></textarea>
+      <input type="date" id="deadline">
+      <input type="time" id="jam">
+      <button onclick="tambahTugas()">Tambah</button>
+    </div>
+
+    <div class="card kanan">
+      <h3>Daftar Tugas</h3>
+      <ul id="list"></ul>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
