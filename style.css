@@ -1,0 +1,188 @@
+* {
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #f8fafc);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e293b;
+}
+
+.container {
+  display: flex;
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+  align-items: flex-start; /* 🔥 penting: biar kiri ga ikut panjang */
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  flex: 1;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* KHUSUS KIRI (FIX HEIGHT) */
+.kiri {
+  height: fit-content; /* 🔥 biar ga ikut tinggi kanan */
+}
+
+/* INPUT */
+.kiri input,
+.kiri textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+/* textarea tanpa scroll */
+textarea {
+  resize: none;
+  overflow: hidden;
+  height: 80px;
+}
+
+/* FOCUS */
+.kiri input:focus,
+.kiri textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59,130,246,0.4);
+}
+
+/* BUTTON */
+.kiri button {
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kiri button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37,99,235,0.3);
+}
+
+/* LIST */
+.kanan ul {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+/* SCROLLBAR */
+.kanan ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.kanan ul::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 10px;
+}
+
+/* TASK CARD */
+li {
+  list-style: none;
+  background: #f1f5f9;
+  margin-top: 12px;
+  padding: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+  border-left: 5px solid transparent;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+/* ACTIVE */
+li.active {
+  background: #dbeafe;
+  border-left: 5px solid #3b82f6;
+}
+
+/* HEADER */
+.task-header {
+  display: flex;
+  align-items: center;
+}
+
+/* CHECKBOX */
+.task-header input {
+  transform: scale(1.2);
+  margin-right: 10px;
+}
+
+/* TITLE */
+.task-header b {
+  flex: 1;
+  color: #1e293b;
+}
+
+/* DELETE */
+.task-header button {
+  background: #ef4444;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.task-header button:hover {
+  background: #dc2626;
+}
+
+/* DETAIL */
+.detail {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+li.active .detail {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+/* DESKRIPSI */
+.deskripsi {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+/* BUTTON SELESAI */
+.selesai-btn {
+  margin-top: 5px;
+  background: #3b82f6;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.selesai-btn:hover {
+  background: #2563eb;
+}
